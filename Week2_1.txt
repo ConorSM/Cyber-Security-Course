@@ -1,0 +1,155 @@
+GIT
+	• Software for tracking changes in any set of files
+	• Markdown is similar to how HTML is used for websites
+
+Cybersecurity Essentials
+	• Definition
+		○ NIST: The ability to protect or defend the use of cyberspace from cyber attacks
+		○ CNSS: 
+			§ Prevention of damage to and
+			§ The protection of and the restoration of computers, electronic communications systems and services, wire communication and electronic communication
+			§ Including information contained therein
+			§ To ensure its availability, integrity, authentication, confidentiality, and non-repudiation
+	• Cybersecurity cube (McCumber Cube)
+		○ Framework for establishing and evaluating information security (information assurance) programs
+		○ Three dimensions
+			§ Desired goals
+			§ Data states
+			§ Safeguards
+	• 1st Dimension: Desired goals (CIA Triad)
+		○ Confidentiality
+			§ No unauthorised access to data
+		○ Integrity
+			§ Data should not be modified by any unauthorized party
+		○ Availability
+			§ Access should not be unavailable
+	• 2nd Dimension: Data states
+		○ Alice, Bob and Trudy
+			§ Alice sends secure message to bob
+				□ If Trudy has access, then confidentiality is lost
+				□ If Trudy…, then integrity is lost
+				□ If Trudy intercepts message and keeps it without sending, then availability is lost
+		○ Storage: Data At Rest (DAR)
+			§ Stored in memory or on a magnetic tape or disk
+		○ Transmission: Data In Transit (DIT)
+			§ Transferring data between information systems
+		○ Processing: Data In Process
+			§ Performing operations on data in order to achieve a desired objective
+			§ Data that Is being used
+	• 3rd Dimension: Safeguards
+		○ Policy and practices: administrative controls, also referred to as operations
+		○ Human factors: also referred to as personnel
+		○ Technology: software and hardware-based solutions
+	• Essential Terms
+		○ Asset: an asset is what we're trying to protect
+		○ Vulnerability: A vulnerability is a weakness or gap in our protection efforts
+		○ Exploit: The way how hackers leverage vulnerabilities
+		○ Threat: A threat is what we're trying to protect against - an hypothetical event
+		○ Risk: The itersection of assets, threats, and vulnerabilities
+	• Causes of vulnerability
+		○ Design and development errors
+		○ Poor system configuration
+		○ Human errors
+		○ Connectivity
+		○ Complexity
+		○ Passwords
+		○ User Input
+		○ Management
+		○ Lack of training to staff
+		○ Communication
+	• Cyber Attacks
+		○ UN-targeted cyber attacks
+		○ Targeted cyber attacks
+	• Cyber Threat Actors
+		○ Motivation is important
+			§ Nation-States: Geopolitical 
+			§ Cybercriminals: Profit
+			§ Hacktivists: Ideological
+			§ Terrorist Groups: Ideological violence
+			§ Thrill-seekers: satisfaction
+			§ Insider threats: discontent
+		○ Non-motivated actors e.g., natural disasters
+	• Cyber Threats
+		○ Malware: software that does malicious tasks on a device or network
+		○ Spyware: form of malware that hides on a device providing real-time information
+		○ Phishing attacks: is when a cybercriminal attempts to lure individuals into providing sensitive data
+		○ Distributed denial of service (DDoS) attacks: aim to disrupt a computer network by flooding the network with superfluous requests
+		○ Ransomware: type of malware that denies access to a computer system or data until a ransom is paid
+		○ Zero-day exploit: a flaw that is unknown to the party or parties responsible for patching the flaw
+		○ Advanced persistent threats: When an unauthorized user stays in the network for a long time
+		○ Trojan: a backdoor in your system
+		○ Wiper attacks: malware whose intention is to wipe the hard drive
+		○ Intellectual property theft: is stealing or using someone else's intellectual property without permission
+		○ Theft of money: gaining access to credit card numbers or bank accounts to steal money
+		○ Data manipulation: doesn't steal data but aims to change the data
+		○ Data destruction: cyber attacker attempts to delete data
+		○ Man-in-the-middle attack: relays and possibly  alters data sent between two people
+		○ Drive-by downloads: a download that happens without a person's knowledge
+		○ Malvertising: online advertising to spread malware
+		○ Rogue software: malware disguised as real software
+		○ Unpatched software: known security weakness, but not updated
+		○ Data centre disrupted by natural disaster: e.g. flooding
+		○ Water holing: Fake website or compromising  legitimate one in order to exploit visiting users
+		○ Spear-phishing: sending emails to targeted individuals that could contain attachment with malicious software, or link that downloads malicious software
+		○ Deploying a botnet: to deliver a DDOS attack
+		○ Subverting the supply chain: attack equipment or software being delivered to the organisation
+	• Cyber Threat Surface
+		○ All available endpoints that a threat actor may attempt to exploit in Internet-connected devices within the cyber threat environment
+			§ The more endpoints, the wider the threat surface in the system
+		○ The many processes that produce, deliver, and rely on information systems connected to the Internet are also potential threat vectors and targets.
+		○ Services, devices, and data can all be targeted 
+		○ Systems that connect to the 
+	• Cyber Kill Chain
+		○ Steps in order to attack a system
+			1. Reconnaissance
+				□ harvesting email addresses, conference information, etc.
+			2. Weaponization
+				□ Coupling exploit with backdoor into deliverable payload
+			3. Delivery:
+				□ Delivering weaponized bundle to the victim via email, web, USB, etc.
+			4. Exploitation
+				□ Exploiting a vulnerability to execute code on victim's system
+			5. Installation
+				□ Installing malware on the asset
+			6. Command and Control
+				□ Command channel for remote manipulation of victim
+				□ Often seen in ransomware
+			7. Actions on objectives
+				□ With "hands on keyboard" access, intruders accomplish their original goals
+		○ "Retreat" is sometimes another step
+			§ Delete evidence after the attack e.g. after a nation state attack - don’t want nation to know you were spying on them
+
+Computer Components
+	• Hardware
+		○ Has firmware that runs the hardware 
+			§ e.g. BIOS
+	• Software
+		○ Everything developed
+			§ E.g. OS
+	• Humanware
+	• All the different types of computers need to be protected
+	• Server
+		○ A computer that provides a service (hence the name)
+
+Kernal
+	• Drivers
+	• Hal
+	• Hardware
+
+
+Shared folders
+Event viewer
+Windows registry (registry editor (search "regedit"))
+Environment variables
+
+Windows OS
+	• Virtual address spaces
+		○ When a processor reads or writes to a memory location, it uses a virtual address, and this is translated to a physical address as part of the read and write process
+	• User mode
+		○ User-mode applications run in a private virtual address space
+		○ Isolated from each other
+	• Kernel mode
+		○ All code shares a single virtual address space
+		○ Not isolated 
+		○ If a kernel mode driver accidently writes to wrong virtual address, data belonging to the OS or another driver could be compromised
+git a
