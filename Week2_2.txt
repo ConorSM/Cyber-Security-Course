@@ -1,0 +1,85 @@
+Stand up
+	Learn about git
+	Hear it all the time, but never actually used it
+	
+GIT and PowerShell commands
+	• Learn git commands, finish multiops
+	• SSH key
+
+Virtualisation
+	• Definition
+		○ Virtualisation is the process of separating a software from the hardware
+		○ A virtual server means that the server doesn't exist In a physical form
+		○ Hypervisor (aka Virtual Machine Monitor (VMM) is the interface between VM and host 
+			§ OS's need to be separated from the hardware
+		○ A VM is just a file
+	• Traditionally servers could only be used for a single application
+		○ New servers need to be bought for other applications
+			§ E.g. web server - Apache, database - MySQL
+		○ Servers may have slightly different OS's and hardware
+			§ Different configurations, can be complicated
+	• Virtual architecture with a Hypervisor allows multiple OS's, each with different Apps
+		○ Each OS thinks that it is working on its own hardware
+
+Virtualisation Types
+	• Type-1 Hypervisor (Native/Bare-Metal)
+		○ Hypervisor runs directly on hardware without any OS
+		○ OS's with APP installed on hypervisor 
+		○ Security
+			§ Hypervisor security
+		○ E.g. Xen, Microsoft Hyper V, Vmware ESX/ESXi
+	• Type-2 Hypervisor (Hosted
+		○ Host machine running under a conventional OS
+		○ Hypervisor installed on OS and shares resources with all other apps
+		○ Security
+			§ Hypervisor security and host's OS security
+		○ E.g. Vmware Workstation, Vmware Player, VirtualBox
+	• Benefits
+		○ Simplicity
+			§ Type-2
+		○ Performance
+			§ Type-1
+		○ Security
+			§ Type-1
+			§ Type 2 has more layers, hence more vulnerabilities
+	• OS's installed on Hypervisor are called guest OS's
+
+Linux
+	• Architecture
+		○ Kernel
+			§ Access hardware
+		○ Shell
+			§ Interface between user applications and Kernel
+			§ Ubuntu terminal is BASH AND DASH
+			§ Kali is …
+		○ Applications
+			§ E.g. browser, email ,python, etc
+	• Linux Distributions
+		○ The different types of linux
+			§ Different purposes
+				□ have different apps
+		○ Main distributions
+			§ Debian
+				□ Ubuntu and Kali
+			§ Fedora
+				□ Red Hat and Centos
+			§ Arch Linux
+				□ Very customizable, but requires experience
+	• Filesystem
+		○ Control how to store and retrieve the data in/from the storage device
+		○ Windows: FAT, FAT32 and NTFS
+		○ Linux: EXT4, EXT3, BTRF, XFS
+			§ EXT4 is the most used
+		○ Windows file systems structure
+			§ Starts with letter
+		○ Linux
+			§ Everything starts at the root
+		○ The concept of "Everything is  a File"
+		○ Commands and names of files and directories are "Case Sensitive"
+		○ Hidden files/directories start with "."
+		○ Filesystem tree
+			§ Everything starts with a "/"
+	• Linux Shell
+		○ Text interface to your computer
+			§ E.g. command line, terminal, console, prompt, or various other names
+		○ Different ways to launch a Linux Terminal
