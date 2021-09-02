@@ -1,0 +1,92 @@
+	• If subnet mask is between, but not equal to 0 and 255 then use logical AND
+		○ E.g. subnet mask = 255.255.255.128
+		○ 3 octets plus a 1 on the last octet = network portion
+		○ The rest = host portion
+		○ Logical AND between IP and subnet used to determine Network portion
+	• NetID = Net address
+		○ But only need to do logical AND if subnet octet not = to 0 or 255?
+	• Ping = ICMP (Internet Control Messaging Protocol)
+	• 3 types of ICMP messages?
+		○ Echo request left host, and received by sender
+		○ Echo request left host, but no reply received
+		○ Echo request could not be sent because route is not clear
+
+Data-Link Layer
+	• Introduction
+		○ Prepares network data for the physical network
+		○ Send data from NIC to NIC within the same network
+			§ Then job is finished
+		○ Ethernet is only one type of protocol/devices used in LAN
+			§ But the most common one
+	• Ethernet Family
+		○ Connection Mode:
+			§ Half-duplex mode: It either sends or receives data, can't do both
+			§ Full-duplex mode: send and receive at the same time
+			§ Standards
+				□ Ethernet / 10 Mbps / half-duplex
+				□ FastEthernet / 100 Mbps / both
+				□ 1 Gigabit Ethernet / 1 Gbps / both
+				□ 10 Gigabit Ethernet / 10 Gbps / full duplex
+	• Layer 2 (L2) Switch
+		○ A switch is made of integrated circuits and the accompanying software that controls the data paths through the switch
+		○ Composed of several ports. Each used to connect to an end-device (e.g. host) or to another intermediary device.
+		○ Forward the traffic (Based on destination MAC address) received on a port to another port where the destination is connected
+			§ If the destination is known send it
+			§ If destination is not known send to all other ports
+		○ How does the switch know which MAC is on which port?
+			§ From the cache table that will be built based on source MAC addresses 
+		○ What if the switch received a frame and the destination MAC address in the frame isn't in the Switch MAC address cache?
+			§ Send it out to all other ports (except the one that it came from)
+	• Data-Link Encapsulation
+		○ Data-Link (L2) Header
+			§ Destination MAC
+			§ Source MAC
+		○ Network (L3) Header
+			§ Source IP 
+			§ Destination IP
+		○ Destination MAC is not known
+			§ ARP (Address Resolution Protocol)
+	• ARP
+		○ The Layer 2 protocol that is used to find the MAC address of the NIC (on the same network) that has certain IP address
+		○ ARP mechanism:
+			§ If you need the MAC of an IP address, broadcast on your network
+			§ All devices on your network will receive the broadcast request
+			§ Only the concerned device (i.e. NIC that has the IP address) will reply
+		○ Which Destination MAC Address will be used in the Ethernet frame?
+			§ Broadcast: ARP can fill the destination MAC address with(ff:ff:ff:ff:ff:ff = 11111111.11111111.11111111.11111111.11111111.11111111.)
+
+Network Layer
+	• Introduction
+		○ A router is a networking device that forwards (routes) the traffic between computer networks
+			§ As opposed to a switch that connects host NICs on the same network
+		○ Router forwards traffic based on destination IP address
+			§ Switch uses destination MAC address
+		○ Doesn't forward any broadcast frames
+			§ IMPORTANT!
+		○ Splits the broadcast domain into multiple broadcast domains
+			§ Switch has one broadcast domain
+		○ Connect networks that have different network id
+			§ Switch connects PCs that share the same network id
+		○ Can connect networks that are connected using different technologies (e.g. Ethernet, ADSL, Broadband, etc.)
+			§ Switch forward traffic between networks that are connected using data-link standard (e.g. Ethernet)
+	• Router example
+		○ In packet tracer
+	• Default Gateway
+		○ The router interface that is connected on a network reachable from the host
+		○ It's the IP address of the NIC of the router
+		○ A host uses it in case it wants to send data to another host  in different network
+		○ It should be directly connected on the same network of the hosts
+		○ The IP address of a default gateway should have the same NetID of the hosts
+		○ The host 
+	• Small Network Routing
+		○ The most simple router is a computer that has two network cards at least
+		○ You can turn any computer into a router if it has more than two NICXs and it's equipped with a software
+	• Directly connected networks
+		○  on a Routing table that contains:
+			§ network address
+			§ subnet mask
+			§ Metric (Hop Count)
+				□ How many steps to get to the network
+				□ Direct connections to the router are have a metric of 0
+			§ Interface
+Static Routing
